@@ -9,20 +9,23 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto" MinHeight="37.96"/>
-            <RowDefinition Height="31"/>
-            <RowDefinition Height="39"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Center" Height="16">Seed:</TextBlock>
+        <TextBlock Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Center" Height="16">Ciąg początkowy:</TextBlock>
         <TextBox Grid.Row="0" Grid.Column="1" Margin="10,10,10,10" Name="SeedTextBox"></TextBox>
-        <TextBlock Grid.Row="1" Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Center" Height="16">Taps:</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="10,0,10,0" VerticalAlignment="Center" Height="16">Indeksy bitów:</TextBlock>
         <TextBox Grid.Row="1" Grid.Column="1" Margin="10,10,10,10" Name="TapsTextBox"></TextBox>
-        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,10,10,9" Name="StartButton" Content="Start"/>
-        <TextBox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,10,10,10" Name="OutputTextBox" IsReadOnly="True"></TextBox>
+        <Button Grid.Row="2" Grid.ColumnSpan="2" Margin="10" Name="StartButton" Click="StartButton_Click" Content="Szyfruj"/>
+        <Button Grid.Row="3" Grid.ColumnSpan="2" Margin="10" Name="DecryptButton" Click="DecryptButton_Click" Content="Odszyfruj"/>
+        <TextBlock Grid.Row="4" Margin="10,0,10,0" VerticalAlignment="Center" Height="16">Wiadomość:</TextBlock>
+        <TextBox Grid.Row="4" Grid.ColumnSpan="2" Margin="10,10,10,10" Name="OutputTextBox" IsReadOnly="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
     </Grid>
 </Window>
